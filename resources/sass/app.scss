@@ -1,18 +1,69 @@
 $font-size-base: 1.2rem;
 // $font-family-base: 'Open Sans';
-$font-family-base: 'Roboto', sans-serif;
+//$font-family-base: 'Roboto', sans-serif;
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-base;
-    font-weight: 700; // Use a bolder weight for headings
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #e5d1a8;
+    border: 30px solid #ffffff;
+    padding: 10px; /* Optional: Add padding to create some space between the content and the outline */
+    background-image: url("/home/thanos/Projects/erodios-restaurant/public/assets/outline.png"); /* Replace with the path to your pattern image */
+    background-clip: padding-box; /* This property ensures the background is visible within the padding area only */
+    background-origin: border-box; /* This property ensures the background starts from the border edge */
 }
 
+.vertical-center {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.navbar-brand {
+    color: #fff; /* White text for the navbar brand */
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+.btn {
+    font-family: "Roboto Slab", serif;
+}
+
+.welcome-container {
+    text-align: center;
+}
+
+.restaurant-name {
+    font-size: 130px;
+    //font-weight: bold;
+    font-family: "Alex Brush", cursive;
+    color: #8b0000; /* Deep red color */
+}
+
+@media (max-width: 768px) {
+    .restaurant-name {
+        font-size: 70px;
+        //font-weight: bold;
+        font-family: "Alex Brush", cursive;
+        color: #8b0000; /* Deep red color */
+    }
+}
+
+.cuisine {
+    font-size: 24px;
+    color: #333; /* Dark gray color */
+    font-family: "Roboto Slab", serif;
+}
 
 // @import "../../node_modules/select2/src/scss/core";
 // // If you need to import Bootstrap as well:
 // @import "../../node_modules/select2-bootstrap-5-theme/src/select2-bootstrap-5-theme";
 // // Or if you have already imported Bootstrap:
-// @import "../../node_modules/select2-bootstrap-5-theme/src/include-all"; 
+// @import "../../node_modules/select2-bootstrap-5-theme/src/include-all";

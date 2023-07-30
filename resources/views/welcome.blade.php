@@ -3,20 +3,16 @@
 @section('title', 'Welcome')
 
 @section('content')
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">Erodios</a>
-        <!-- Add any additional navigation links here -->
-    </div>
-</nav>
+
 
 <!-- Hero Section -->
-<section class="hero bg-primary text-white text-center py-5">
-    <div class="container">
-        <h1 class="display-4">Welcome to Our Restaurant</h1>
-        <p class="lead">Discover our delicious menu and enjoy a delightful dining experience.</p>
-        <!-- Add a call-to-action button here to direct users to the menu or reservation page -->
-    </div>
+<section>
+    <body>
+        <div class="welcome-container ">
+            <div class="restaurant-name ">Erodios Restaurant</div>
+            <div class="cuisine">Greek-Mediterranean Cuisine</div>
+        </div>
+    </body>
 </section>
 
 <!-- Content Section -->
