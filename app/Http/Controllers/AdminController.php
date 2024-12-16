@@ -26,11 +26,13 @@ class AdminController extends Controller
         return back()->withErrors(['name' => 'Invalid credentials.']);
     }
 
+
     // Admin dashboard
     public function dashboard()
     {
         return view('admin.dashboard');
     }
+
 
     // Handle admin logout
     public function logout()
@@ -38,6 +40,7 @@ class AdminController extends Controller
         Auth::logout();
         return redirect()->route('admin.login');
     }
+
 
     // Show plates list
     public function showPlates()
@@ -89,4 +92,3 @@ class AdminController extends Controller
         return redirect()->route('admin.plates');
     }
 }
-

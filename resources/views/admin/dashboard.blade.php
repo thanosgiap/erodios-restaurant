@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #dad0c0;
         }
         .header {
             background-color: #4CAF50;
@@ -35,9 +35,6 @@
             border-radius: 4px;
             text-align: center;
         }
-        .dashboard-container a:hover {
-            background-color: #0056b3;
-        }
         .logout-form {
             text-align: center;
         }
@@ -48,9 +45,6 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-        }
-        .logout-form button:hover {
-            background-color: #D43F3F;
         }
     </style>
 </head>

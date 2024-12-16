@@ -12,7 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f4f4f9;
+            background-color: #dad0c0;
         }
         .login-container {
             background: white;
