@@ -1,8 +1,16 @@
 /* General Reset */
-body, h1, h2, h3, h4, p, a {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
     margin: 0;
-    padding-left: 20px;   /* Adds space on the left */
-    padding-right: 20px;  /* Adds space on the right */
+    padding-left: 20px;
+    /* Adds space on the left */
+    padding-right: 20px;
+    /* Adds space on the right */
     box-sizing: border-box;
     font-family: 'Literata', serif;
     background-color: #dad0c0;
@@ -13,33 +21,47 @@ body, h1, h2, h3, h4, p, a {
 /* Welcome Screen */
 .welcome-screen {
     display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center;     /* Centers content vertically */
-    height: 100vh;           /* Full viewport height */
-    flex-direction: column; 
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    height: 80vh;
+    /* Full viewport height */
+    flex-direction: column;
     position: relative;
-    opacity: 1; /* Fully visible */
-    transition: opacity 1s ease-in-out; /* Smooth fade effect for opacity */
+    opacity: 1;
+    /* Fully visible */
+    transition: opacity 1s ease-in-out;
+    /* Smooth fade effect for opacity */
+    padding-bottom: 200px;
 }
 
 /* Optional: Ensure logo-container fades out too */
 .logo-container {
     text-align: center;
-    transition: opacity 1s ease-in-out; /* Smooth fade effect */
+    transition: opacity 1s ease-in-out;
+
+    /* Smooth fade effect */
 }
 
 /* When fading out */
 .welcome-screen.fade-out {
-    opacity: 0; /* Fully transparent */
-    pointer-events: none; /* Prevent interactions with invisible elements */
+    opacity: 0;
+    /* Fully transparent */
+    pointer-events: none;
+    /* Prevent interactions with invisible elements */
 }
 
 /* Adjust logo and message transitions */
 .logo {
-    max-width: 100%; /* Ensures the logo resizes properly */
-    max-height: 40vh; /* Ensures it doesn’t grow too large on smaller screens */
-    margin-bottom: 20px; /* Space between logo and message */
-    transition: transform 1s ease, opacity 1s ease; /* Optional: Smooth transition for transformations */
+    max-width: 100%;
+    /* Ensures the logo resizes properly */
+    max-height: 40vh;
+    /* Ensures it doesn’t grow too large on smaller screens */
+    margin-bottom: 20px;
+    /* Space between logo and message */
+    transition: transform 1s ease, opacity 1s ease;
+    /* Optional: Smooth transition for transformations */
 }
 
 .welcome-message {
@@ -47,58 +69,81 @@ body, h1, h2, h3, h4, p, a {
     color: #333;
     text-align: center;
     margin-top: 0px;
-    opacity: 1; /* Initially visible */
-    transition: opacity 1s ease-in-out; /* Fade effect on opacity change */
+    opacity: 1;
+    /* Initially visible */
+    transition: opacity 1s ease-in-out;
+    /* Fade effect on opacity change */
 }
 
 
+/* Dropdown button */
 
-/* SVG*/
-
-
-/* Dropdown */
-.dropdown {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.dropdown-btn {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+.dropbtn {
+    font-family: 'Literata', serif;
+    background-color: #dad0c0;
+    color: #333;
+    font-size: 16px;
     border: none;
     cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000; 
 }
 
+/* Dropdown container */
+.dropdown {
+    position: fixed;
+    /* Keeps dropdown in place */
+    top: 10px;
+    right: 15px;
+    z-index: 999;
+}
+
+/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    min-width: 150px;
     right: 0;
-    z-index: 1;
+    top: 45px;
+    background-color: #dad0c0;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    max-height: 300px; /* Maximum height before scroll appears */
+    overflow-y: auto; /* Allows vertical scrolling */
 }
 
+/* Links inside the dropdown */
 .dropdown-content a {
-    display: block;
-    padding: 10px;
+    color: #333;
+    padding: 12px 16px;
     text-decoration: none;
-    color: black;
+    display: block;
 }
 
+/* Change color of dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
 
+/* Class to show the dropdown */
 .show {
     display: block;
 }
 
 
+
+/* Hide class */
+.hidden {
+    display: none;
+}
+
+
 /* Main Content Section */
-.soups, .mains, .desserts {
+.soups,
+.mains,
+.desserts {
     text-align: left;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -106,69 +151,104 @@ body, h1, h2, h3, h4, p, a {
 
 .title-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Center vertically */
-    margin-bottom: 40px;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .category-title {
     font-size: 1.7rem;
     text-align: center;
+    color: #333;
 }
 
 
 /* Container for the items */
-.soup-list, .main-dish-list, .dessert-list {
+.soup-list,
+.main-dish-list,
+.dessert-list {
     display: flex;
-    flex-direction: column;  /* Stack items vertically */
-    align-items: center;     /* Center the items horizontally */
-    gap: 20px;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center the items horizontally */
+    
 }
 
 /* Styling for individual items */
-.soup-item, .main-dish-item, .dessert-item {
+.soup-item,
+.main-dish-item,
+.dessert-item {
     display: flex;
-    justify-content: space-between; /* Space between text and price */
-    align-items: flex-start; /* Align items at the top */
-    padding: 10px 20px; /* Adjust padding */
+    justify-content: space-between;
+    /* Space between text and price */
+    align-items: flex-start;
+    /* Align items at the top */
+    padding: 10px 20px;
+    /* Adjust padding */
     border-radius: 8px;
     width: 90%;
     max-width: 600px;
-    margin: 10px auto; /* Center items horizontally */
+    margin: 10px auto;
+    /* Center items horizontally */
     /* border-bottom: 1px solid #ddd;  */
 }
 
 /* Styling for the item name and description */
-.soup-item h3, .main-dish-item h3, .dessert-item h3 {
-    
-    margin-bottom: 10px;
+.soup-item h3,
+.main-dish-item h3,
+.dessert-item h3 {
+
+    margin-bottom: 1px;
     color: #333;
 }
 
-.soup-item p, .main-dish-item p, .dessert-item p {
+.soup-item p,
+.main-dish-item p,
+.dessert-item p {
 
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /* Styling for the price */
 .price {
-    
+
     color: #007b5e;
-    text-align: right;  /* Right-align the price */
+    text-align: right;
+    /* Right-align the price */
 }
 
 .disclaimer {
     display: flex;
-    justify-content: space-between; /* Space between text and price */
-    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between;
+    /* Space between text and price */
+    align-items: flex-start;
+    /* Align items at the top */
     padding-top: 200px;
     border-radius: 8px;
     width: 90%;
     max-width: 600px;
-    margin: 10px auto; /* Center items horizontally */
+    margin: 10px auto;
+    /* Center items horizontally */
     text-align: center;
 }
 
 
+.lang-btn {
+    border: none;  /* Removes border */
+    padding: 0;    /* Removes padding */
+    background: none; /* Removes background */
+    cursor: pointer; /* Ensures it's clickable */
+    display: inline-block; /* Makes it behave like an image */
+    margin-right: 10px;
+    margin-top: 10px;
+}
 
+.lang-btn img {
+    display: block; /* Removes extra space below image */
+    width: 40px; /* Adjust as needed */
+}
