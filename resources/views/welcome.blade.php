@@ -63,6 +63,7 @@
     <div class="menu-category soups">
         <div class="soup-list">
             @foreach($soups as $soup)
+            @if ($soup->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class="lang-gr">{{ $soup->greek_name }}</h3>
@@ -76,6 +77,7 @@
                 </div>
                 <span class="price">{{ $soup->price }}€</span>
             </div>
+            @endif
             @endforeach
         </div>
     </div>
@@ -92,6 +94,7 @@
 
         <div class="soup-list">
             @foreach($appetizers as $appetizer)
+            @if ($appetizer->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-gr'>{{ $appetizer->greek_name }}</h3>
@@ -106,7 +109,7 @@
                 <span class="price">{{ $appetizer->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -123,6 +126,7 @@
 
         <div class="soup-list">
             @foreach($salads as $salad)
+            @if ($salad->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en'>{{ $salad->english_name }}</h3>
@@ -137,7 +141,7 @@
                 <span class="price">{{ $salad->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -154,6 +158,7 @@
 
         <div class="soup-list">
             @foreach($specialities as $speciality)
+            @if ($speciality->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $speciality->english_name }}</h3>
@@ -168,7 +173,7 @@
                 <span class="price">{{ $speciality->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -185,6 +190,7 @@
 
         <div class="soup-list">
             @foreach($pastas as $pasta)
+            @if ($pasta->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $pasta->english_name }}</h3>
@@ -199,7 +205,7 @@
                 <span class="price">{{ $pasta->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -216,6 +222,7 @@
 
         <div class="soup-list">
             @foreach($seafoods as $seafood)
+            @if ($seafood->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $seafood->english_name }}</h3>
@@ -230,7 +237,7 @@
                 <span class="price">{{ $seafood->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -248,6 +255,7 @@
 
         <div class="soup-list">
             @foreach($shellfishes as $shellfish)
+            @if ($shellfish->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $shellfish->english_name }}</h3>
@@ -262,7 +270,7 @@
                 <span class="price">{{ $shellfish->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -280,6 +288,7 @@
 
         <div class="soup-list">
             @foreach($fishes as $fish)
+            @if ($fish->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $fish->english_name }}</h3>
@@ -294,7 +303,7 @@
                 <span class="price">{{ $fish->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -311,6 +320,7 @@
 
         <div class="soup-list">
             @foreach($suggestions as $suggestion)
+            @if ($suggestion->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $suggestion->english_name }}</h3>
@@ -325,7 +335,7 @@
                 <span class="price">{{ $suggestion->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -342,6 +352,7 @@
 
         <div class="soup-list">
             @foreach($meats as $meat)
+            @if ($meat->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $meat->english_name }}</h3>
@@ -356,7 +367,7 @@
                 <span class="price">{{ $meat->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -374,6 +385,7 @@
 
         <div class="soup-list">
             @foreach($desserts as $dessert)
+            @if ($dessert->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $dessert->english_name }}</h3>
@@ -388,7 +400,7 @@
                 <span class="price">{{ $dessert->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>
@@ -404,6 +416,7 @@
 
         <div class="soup-list">
             @foreach($coffees as $coffee)
+            @if ($coffee->is_visible)
             <div class="soup-item">
                 <div class="item-details">
                     <h3 class='lang-en hidden'>{{ $coffee->english_name }}</h3>
@@ -418,7 +431,7 @@
                 <span class="price">{{ $coffee->price }}€</span>
 
             </div>
-
+            @endif
             @endforeach
         </div>
     </div>

@@ -20,6 +20,7 @@ class MenuItem extends Model
         'greek_description',
         'russian_description', 
         'price',
-        'category'
+        'category',
+        'is_visible'
     ];
 }

@@ -83,6 +83,15 @@ class AdminController extends Controller
         return redirect()->route('admin.plates');
     }
 
+    public function toggleVisibility($id)
+    {
+        $plate = MenuItem::findOrFail($id);
+        $plate->is_visible = !$plate->is_visible;
+        $plate->save();
+
+        return redirect()->back()->with('success', 'Plate visibility updated.');
+    }
+
     // Delete a plate
     public function deletePlate($id)
     {

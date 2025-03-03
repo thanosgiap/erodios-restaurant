@@ -19,4 +19,7 @@ Route::middleware('admin.auth')->group(function () {
     Route::post('/admin/plates/add', [AdminController::class, 'addPlate'])->name('admin.plates.add');
     Route::post('/admin/plates/edit/{id}', [AdminController::class, 'editPlate'])->name('admin.plates.edit');
     Route::delete('/admin/plates/delete/{id}', [AdminController::class, 'deletePlate'])->name('admin.plates.delete');
+    Route::post('/admin/plates/{id}/toggle', [AdminController::class, 'toggleVisibility'])
+    ->name('admin.plates.toggle');
+
 });
